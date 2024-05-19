@@ -36,7 +36,7 @@ export default function Register() {
         setIsLoading(false);
         return;
       }
-      const response = await fetch("http://localhost:8000/api/createuser", {
+      const response = await fetch("https://rentify-backend-nine.vercel.app/api/createuser", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
