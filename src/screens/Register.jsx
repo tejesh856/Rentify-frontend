@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useContext } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate,useLocation } from "react-router-dom";
 import banner from "../Images/banner.jpg";
 import Loader from "../components/Loader";
 import { datacontext } from "../Datacontext";
@@ -7,6 +7,7 @@ import { datacontext } from "../Datacontext";
 export default function Register() {
   const { tokenState } = useContext(datacontext);
   const navigate = useNavigate();
+  const location = useLocation();
   useEffect(() => {
     if (tokenState) {
       navigate("/");
