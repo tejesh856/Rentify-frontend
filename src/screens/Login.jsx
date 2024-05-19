@@ -13,6 +13,12 @@ export default function Login() {
   useEffect(() => {
     if (tokenState) {
       navigate("/");
+    }else{
+      if(location.pathname==='/register'){
+        navigate('/register')
+      }else{
+        navigate('/login)
+      }
     }
   }, [tokenState, navigate]);
   const handleloginsubmit = async (e) => {
