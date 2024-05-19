@@ -23,7 +23,7 @@ export default function Login() {
         setIsLoading(false);
         return;
       }
-      const response = await fetch("http://localhost:8000/api/loginuser", {
+      const response = await fetch("https://rentify-backend-nine.vercel.app/api/loginuser", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
