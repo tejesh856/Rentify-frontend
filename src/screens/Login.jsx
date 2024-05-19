@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useContext } from "react";
-import { Link, useNavigate,useLocation } from "react-router-dom";
+import { Link, useNavigate, useLocation } from "react-router-dom";
 import { datacontext } from "../Datacontext";
 import Loader from "../components/Loader";
 import banner from "../Images/banner.jpg";
@@ -18,7 +18,7 @@ export default function Login() {
       if(location.pathname==='/register'){
         navigate('/register')
       }else{
-        navigate('/login)
+        navigate('/login')
       }
     }
   }, [tokenState, navigate]);
