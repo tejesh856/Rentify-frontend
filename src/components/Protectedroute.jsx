@@ -10,7 +10,7 @@ export default function Protectedroute({ Element }) {
   useEffect(() => {
     const checkAuthToken = async () => {
       try {
-        const response = await fetch("http://localhost:8000/api/authstatus", {
+        const response = await fetch("https://rentify-backend-nine.vercel.app/api/authstatus", {
           credentials: "include",
         });
         const data = await response.json();
