@@ -15,10 +15,10 @@ export default function Register() {
       if(location.pathname==='/register'){
         navigate('/register')
       }else{
-        navigate('/login)
+        navigate('/login')
       }
     }
-  }, [tokenState, navigate]);
+  }, [tokenState, navigate,location.pathname]);
   const [isLoading, setIsLoading] = useState(false);
   const [signupData, setSignupData] = useState({
     firstname: "",
