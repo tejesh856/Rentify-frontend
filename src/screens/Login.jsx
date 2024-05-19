@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useContext } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate,useLocation } from "react-router-dom";
 import { datacontext } from "../Datacontext";
 import Loader from "../components/Loader";
 import banner from "../Images/banner.jpg";
@@ -10,6 +10,7 @@ export default function Login() {
   const [isLoading, setIsLoading] = useState(false);
   const { tokenState, setTokenState } = useContext(datacontext);
   const navigate = useNavigate();
+  const location = useLocation();
   useEffect(() => {
     if (tokenState) {
       navigate("/");
