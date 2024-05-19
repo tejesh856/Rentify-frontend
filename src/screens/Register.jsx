@@ -10,7 +10,8 @@ export default function Register() {
   useEffect(() => {
     if (tokenState) {
       navigate("/");
-    }else{if(location.pathname==='/register'){
+    }else{
+      if(location.pathname==='/register'){
         navigate('/register')
       }else{
         navigate('/login)
