@@ -21,7 +21,7 @@ export default function Login() {
         navigate('/login')
       }
     }
-  }, [tokenState, navigate]);
+  }, [tokenState, navigate,location.pathname]);
   const handleloginsubmit = async (e) => {
     e.preventDefault();
     setIsLoading(true);
