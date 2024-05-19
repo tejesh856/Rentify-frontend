@@ -10,6 +10,11 @@ export default function Register() {
   useEffect(() => {
     if (tokenState) {
       navigate("/");
+    }else{if(location.pathname==='/register'){
+        navigate('/register')
+      }else{
+        navigate('/login)
+      }
     }
   }, [tokenState, navigate]);
   const [isLoading, setIsLoading] = useState(false);
